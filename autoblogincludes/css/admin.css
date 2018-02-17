@@ -1,0 +1,423 @@
+/**
+ * =============================================================================
+ * Charts
+ * =============================================================================
+ */
+
+#autoblog-dashboard-chart {
+	height: 450px;
+	border: 2px solid #aaa;
+	position: relative;
+	margin: 20px 0;
+	background-color: white;
+}
+
+
+
+/**
+ * =============================================================================
+ * Spinner
+ * =============================================================================
+ */
+
+.autoblog-spinner {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+
+.autoblog-spinner-cube1,
+.autoblog-spinner-cube2 {
+  background-color: #999;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: cubemove 1.8s infinite ease-in-out;
+  animation: cubemove 1.8s infinite ease-in-out;
+}
+
+.autoblog-spinner-cube2 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+@-webkit-keyframes cubemove {
+  25% { -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5) }
+  50% { -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg) }
+  75% { -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5) }		   	 	 	    			 	
+  100% { -webkit-transform: rotate(-360deg) }
+}
+
+@keyframes cubemove {
+  25% {
+    transform: translateX(42px) rotate(-90deg) scale(0.5);
+    -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);
+  } 50% {
+    transform: translateX(42px) translateY(42px) rotate(-179deg);
+    -webkit-transform: translateX(42px) translateY(42px) rotate(-179deg);
+  } 50.1% {
+    transform: translateX(42px) translateY(42px) rotate(-180deg);
+    -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);
+  } 75% {
+    transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+    -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+  } 100% {
+    transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
+  }
+}
+
+
+
+/**
+ * =============================================================================
+ * Empty box
+ * =============================================================================
+ */
+
+#autoblog-empty-box {
+	border: 2px dashed gray;
+	text-align: center;
+	padding: 4em 0;
+	color: #c2c4c5;
+}
+
+
+
+/**
+ * =============================================================================
+ * Logs
+ * =============================================================================
+ */
+
+.autoblog-table .column-post_type,
+.autoblog-table .column-addon {
+	width: 200px;
+}
+
+.autoblog-table .disabled {
+	color: #ccc;
+}
+
+.autoblog-table .column-lastupdated,
+.autoblog-table .column-nextcheck {
+	width: 150px;
+}
+
+.autoblog-log-row {
+	padding: 10px;
+	display: block;
+}
+
+.autoblog-log-date {
+	border: 2px solid #00487f;
+	border-top-width: 0;
+	background-color: white;
+	margin-bottom: 10px;
+}
+
+.autoblog-log-date:last-child {
+	border-bottom-width: 2px;
+}
+
+.autoblog-log-date-icon {
+	display: block;
+	float: left;
+	margin-right: 7px;
+	margin-top: 3px;
+}
+
+.autoblog-log-date > .autoblog-log-row {
+	border-bottom: 1px solid #00487f;
+	background-color: #00487f;
+	color: white;
+	font-weight: bold;
+	font-size: 110%;
+	line-height: 1.5em;
+	padding: 5px 10px;
+}
+
+.autoblog-log-feed > .autoblog-log-row {
+	padding-left: 10px;
+	border-bottom: 1px dotted #ddd;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.autoblog-log-feed > .autoblog-log-row .autoblog-log-feed-url {
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 10px;
+    word-wrap: break-word;
+    white-space: pre;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+
+.autoblog-log-feed > .autoblog-log-row:hover {
+	background-color: whitesmoke;
+}
+
+.autoblog-log-feed > .autoblog-log-row > b {
+	margin-left: 10px;
+}
+
+.autoblog-log-feed:last-child > .autoblog-log-row {
+	border-bottom: none;
+}
+
+.autoblog-log-feed-collapse-up {
+	display: none;
+}
+
+.autoblog-log-feed-info {
+	float: right;
+	margin-left: 10px;
+	width: 60px;
+}
+
+.autoblog-log-feed-info span {
+	margin-right: 5px;
+}
+
+.autoblog-log-feed-iterations,
+.autoblog-log-feed-errors,
+.autoblog-log-feed-imports {
+	opacity: 0.2;
+}
+
+.autoblog-log-feed-info-active {
+	opacity: 1;
+}
+
+.autoblog-log-feed-iterations span {
+	color: green;
+}
+
+.autoblog-log-feed-errors span {
+	color: red;
+}
+
+.autoblog-log-feed-imports span {
+	color: #01b1f3;
+}
+
+.autoblog-log-feed .slimScrollDiv {
+	clear: both;
+	display: none;
+}
+
+.autoblog-log-feed-records {
+	display: none;
+	box-shadow: inset 0 0 10px #aaa;
+}
+
+.autoblog-log-record {
+	border-bottom: 1px solid #e0e0e0;
+}
+
+.autoblog-log-record-1,
+.autoblog-log-record-2,
+.autoblog-log-record-7,
+.autoblog-log-record-8,
+.autoblog-log-record-9,
+.autoblog-log-record-10 {
+	border-top: 1px solid #e0e0e0;
+}
+
+.autoblog-log-feed-records > .autoblog-log-record:first-child {
+	border-top-width: 0;
+}
+
+.autoblog-log-record .autoblog-log-row {
+	padding-left: 20px;
+}
+
+.autoblog-log-record a {
+	text-decoration: none;
+}
+
+.autoblog-log-record-time {
+	color: black;
+	font-weight: bold;
+	width: 80px;
+	float: left;
+	display: block;
+}
+
+.autoblog-log-record-time-alt {
+	color: #e0e0e0;
+	font-weight: normal;
+}
+
+.autoblog-log-record .autoblog-log-row .glyphicon {
+	margin-right: 10px;
+}
+
+.autoblog-log-record .autoblog-log-row .glyphicon-warning-sign {
+	color: red;
+}
+
+.autoblog-log-record .autoblog-log-row .glyphicon-info-sign {
+	color: lightskyblue;
+}
+
+.autoblog-log-record .autoblog-log-row .glyphicon-refresh,
+.autoblog-log-record .autoblog-log-row .glyphicon-ok-sign {
+	color: green;
+}
+
+.autoblog-cache-info {
+	margin-right: 20px;
+	padding: 3px 5px;
+	font-size: 0.85em;
+}
+
+
+
+/**
+ * =============================================================================
+ * Skins
+ * =============================================================================
+ */
+
+/* coffee */
+
+#autoblog-empty-box,
+.admin-color-coffee .autoblog-log-date,
+.admin-color-coffee #autoblog-dashboard-chart,
+.admin-color-coffee .autoblog-log-date > .autoblog-log-row {
+	border-color: #59524c;
+}
+
+.admin-color-coffee .autoblog-spinner-cube1,
+.admin-color-coffee .autoblog-spinner-cube2,
+.admin-color-coffee .autoblog-log-date > .autoblog-log-row {
+	background-color: #59524c;
+}
+
+/* sunrise */
+
+#autoblog-empty-box,
+.admin-color-sunrise .autoblog-log-date,
+.admin-color-sunrise #autoblog-dashboard-chart,
+.admin-color-sunrise .autoblog-log-date > .autoblog-log-row {
+	border-color: #cf4944;
+}
+
+.admin-color-sunrise .autoblog-spinner-cube1,
+.admin-color-sunrise .autoblog-spinner-cube2,
+.admin-color-sunrise .autoblog-log-date > .autoblog-log-row {
+	background-color: #cf4944;
+}
+
+/* ocean */
+
+#autoblog-empty-box,
+.admin-color-ocean .autoblog-log-date,
+.admin-color-ocean #autoblog-dashboard-chart,
+.admin-color-ocean .autoblog-log-date > .autoblog-log-row {
+	border-color: #738e96;
+}
+
+.admin-color-ocean .autoblog-spinner-cube1,
+.admin-color-ocean .autoblog-spinner-cube2,
+.admin-color-ocean .autoblog-log-date > .autoblog-log-row {
+	background-color: #738e96;
+}
+
+/* blue */
+
+#autoblog-empty-box,
+.admin-color-blue .autoblog-log-date,
+.admin-color-blue #autoblog-dashboard-chart,
+.admin-color-blue .autoblog-log-date > .autoblog-log-row {
+	border-color: #52accc;
+}
+
+.admin-color-blue .autoblog-spinner-cube1,
+.admin-color-blue .autoblog-spinner-cube2,
+.admin-color-blue .autoblog-log-date > .autoblog-log-row {
+	background-color: #52accc;
+}
+
+/* midnight */
+
+#autoblog-empty-box,
+.admin-color-midnight .autoblog-log-date,
+.admin-color-midnight #autoblog-dashboard-chart,
+.admin-color-midnight .autoblog-log-date > .autoblog-log-row {
+	border-color: #363b3f;
+}
+
+.admin-color-midnight .autoblog-spinner-cube1,
+.admin-color-midnight .autoblog-spinner-cube2,
+.admin-color-midnight .autoblog-log-date > .autoblog-log-row {
+	background-color: #363b3f;
+}
+
+/* light */
+
+#autoblog-empty-box,
+.admin-color-light .autoblog-log-date,
+.admin-color-light #autoblog-dashboard-chart,
+.admin-color-light .autoblog-log-date > .autoblog-log-row {
+	border-color: #e5e5e5;
+}
+
+.admin-color-light .autoblog-spinner-cube1,
+.admin-color-light .autoblog-spinner-cube2,
+.admin-color-light .autoblog-log-date > .autoblog-log-row {
+	background-color: #888;
+}
+
+.admin-color-light .autoblog-log-date > .autoblog-log-row {
+	color: #888;
+	background-color: #e5e5e5;
+}
+
+/* ectoplasm */
+
+#autoblog-empty-box,
+.admin-color-ectoplasm .autoblog-log-date,
+.admin-color-ectoplasm #autoblog-dashboard-chart,
+.admin-color-ectoplasm .autoblog-log-date > .autoblog-log-row {
+	border-color: #523f6d;
+}
+
+.admin-color-ectoplasm .autoblog-spinner-cube1,
+.admin-color-ectoplasm .autoblog-spinner-cube2,
+.admin-color-ectoplasm .autoblog-log-date > .autoblog-log-row {
+	background-color: #523f6d;
+}
+
+/* fresh */
+
+#autoblog-empty-box,
+.admin-color-fresh .autoblog-log-date,
+.admin-color-fresh #autoblog-dashboard-chart,
+.admin-color-fresh .autoblog-log-date > .autoblog-log-row {
+	border-color: #222;
+}
+
+.admin-color-fresh .autoblog-spinner-cube1,
+.admin-color-fresh .autoblog-spinner-cube2,
+.admin-color-fresh .autoblog-log-date > .autoblog-log-row {
+	background-color: #222;
+}
+
+
+/* 403900-1511247253-ai */
